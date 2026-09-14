@@ -51,3 +51,5 @@ migration/database/backups/*
 # VS Code Local Settings
 # ==========================================
 .vscode/
+# Local runtime storage
+local-storage/

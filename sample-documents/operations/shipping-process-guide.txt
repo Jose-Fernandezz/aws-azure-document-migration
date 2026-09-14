@@ -1,0 +1,16 @@
+Shipping Process Guide
+
+Department: Operations
+Document Owner: Carlos Mendes
+Document Date: 2026-06-12
+
+Purpose
+This document contains synthetic business information created for the Operations department as part of the Cloud Document Management System migration project.
+
+Operational Summary
+The information in this document represents realistic internal business content used to test document storage, metadata management, cross-cloud migration, and data-integrity validation.
+
+Migration Classification
+Source Platform: Amazon Web Services (AWS)
+Target Platform: Microsoft Azure
+Data Classification: Synthetic / Non-sensitive

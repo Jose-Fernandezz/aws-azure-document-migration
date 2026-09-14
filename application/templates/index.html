@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management System</title>
+</head>
+
+<body>
+    <h1>Document Management System</h1>
+
+    <p>
+        <a href="/upload">Upload Document</a>
+    </p>
+
+    <p>Total documents: {{ documents|length }}</p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Record</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Filename</th>
+                <th>File Type</th>
+                <th>Uploaded By</th>
+                <th>Upload Date</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for document in documents %}
+            <tr>
+                <td>{{ document.record_number }}</td>
+
+                <td>
+                    <a href="/documents/{{ document.record_number }}">
+                        {{ document.title }}
+                    </a>
+                </td>
+
+                <td>{{ document.department }}</td>
+                <td>{{ document.original_filename }}</td>
+                <td>{{ document.file_type }}</td>
+                <td>{{ document.uploaded_by }}</td>
+                <td>{{ document.uploaded_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
