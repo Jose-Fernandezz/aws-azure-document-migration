@@ -1,0 +1,252 @@
+[
+    {
+        "Key": "finance/accounts-payable-summary.pdf",
+        "Size": 1829,
+        "ETag": "\"aa4972ef3cb911a3fb0ae7c01739861c\""
+    },
+    {
+        "Key": "finance/budget-variance-analysis.txt",
+        "Size": 623,
+        "ETag": "\"155de611396ce609b11ca8845d2dab0b\""
+    },
+    {
+        "Key": "finance/capital-expenditure-review.docx",
+        "Size": 36936,
+        "ETag": "\"1f149df383fd46543e70f7113dd4cc32\""
+    },
+    {
+        "Key": "finance/fy2026-department-budget.png",
+        "Size": 16853,
+        "ETag": "\"dab6c9d5fed7b5bf88b8dda3f46737ac\""
+    },
+    {
+        "Key": "finance/monthly-financial-forecast.pdf",
+        "Size": 1825,
+        "ETag": "\"6994455bbdd530951532ab51649c31e9\""
+    },
+    {
+        "Key": "finance/procurement-expense-overview.csv",
+        "Size": 837,
+        "ETag": "\"50b12c160b88b666c32312cca44ab63f\""
+    },
+    {
+        "Key": "finance/q3-expense-summary.png",
+        "Size": 16791,
+        "ETag": "\"eaa603776a81e571fd70864ef9033776\""
+    },
+    {
+        "Key": "finance/quarterly-cost-report.docx",
+        "Size": 36929,
+        "ETag": "\"5ed3849da1c4198d1dbf2c37cfc31c53\""
+    },
+    {
+        "Key": "finance/travel-reimbursement-report.png",
+        "Size": 16398,
+        "ETag": "\"6f189900f07fb3d50f9de76264263724\""
+    },
+    {
+        "Key": "finance/vendor-invoice-register.docx",
+        "Size": 36931,
+        "ETag": "\"e7170133d9e39669929cbbe2902e8b4e\""
+    },
+    {
+        "Key": "human-resources/benefits-overview.pdf",
+        "Size": 1817,
+        "ETag": "\"07555f7ea168533ff7b231f6ef941441\""
+    },
+    {
+        "Key": "human-resources/employee-handbook.pdf",
+        "Size": 1819,
+        "ETag": "\"765ede55e42cdc37a69bf0690f5c6b17\""
+    },
+    {
+        "Key": "human-resources/employee-onboarding-guide.xlsx",
+        "Size": 6154,
+        "ETag": "\"6cf95ce87d21915f4922432ed779c7b7\""
+    },
+    {
+        "Key": "human-resources/leave-and-attendance-policy.png",
+        "Size": 16928,
+        "ETag": "\"e3831af0b3d2eab3263dd27d2baa8cbb\""
+    },
+    {
+        "Key": "human-resources/new-hire-checklist.png",
+        "Size": 16722,
+        "ETag": "\"4055c9f43a2b0a164f392310919a3c84\""
+    },
+    {
+        "Key": "human-resources/performance-review-guidelines.txt",
+        "Size": 643,
+        "ETag": "\"705a5c9c5ca319ab40e4c474d8ae6e32\""
+    },
+    {
+        "Key": "human-resources/professional-development-plan.txt",
+        "Size": 644,
+        "ETag": "\"3e55038ca870bfd3c70c1d45389b4f6d\""
+    },
+    {
+        "Key": "human-resources/remote-work-policy.txt",
+        "Size": 632,
+        "ETag": "\"5350c8888d4ade7c0f36e436480e3006\""
+    },
+    {
+        "Key": "human-resources/training-schedule.pdf",
+        "Size": 1816,
+        "ETag": "\"067a86481a504be477150ab4d80ada89\""
+    },
+    {
+        "Key": "human-resources/workplace-conduct-guide.txt",
+        "Size": 638,
+        "ETag": "\"afb1dcd78b3f850818081fcacd62f5e4\""
+    },
+    {
+        "Key": "information-technology/access-review-report.csv",
+        "Size": 895,
+        "ETag": "\"7fd4c16a5274f9f3854dcc6473394007\""
+    },
+    {
+        "Key": "information-technology/backup-and-recovery-procedure.csv",
+        "Size": 964,
+        "ETag": "\"741131a05c3163945fc76d9e950c7468\""
+    },
+    {
+        "Key": "information-technology/cloud-access-procedure.docx",
+        "Size": 36934,
+        "ETag": "\"e2c94d29efed8bcfede3664de139c4d5\""
+    },
+    {
+        "Key": "information-technology/incident-response-checklist.png",
+        "Size": 16867,
+        "ETag": "\"199eef4f4bd534fc970c68de95287891\""
+    },
+    {
+        "Key": "information-technology/it-service-continuity-plan.docx",
+        "Size": 36934,
+        "ETag": "\"c70a695dd568abb9752653bc4dd8bfb1\""
+    },
+    {
+        "Key": "information-technology/network-maintenance-schedule.png",
+        "Size": 17411,
+        "ETag": "\"035a9615d44d5f175dd2d0ea422992cb\""
+    },
+    {
+        "Key": "information-technology/patch-management-guide.pdf",
+        "Size": 1827,
+        "ETag": "\"dc5494fbed3322e32728af01fd30e91a\""
+    },
+    {
+        "Key": "information-technology/security-awareness-guide.csv",
+        "Size": 906,
+        "ETag": "\"25981bc640ed1485c600501274bac058\""
+    },
+    {
+        "Key": "information-technology/software-license-register.xlsx",
+        "Size": 6160,
+        "ETag": "\"4807cb3a2a8e90d3dcfc73b2d5054c1a\""
+    },
+    {
+        "Key": "information-technology/system-inventory.docx",
+        "Size": 36935,
+        "ETag": "\"cfcfb1b854b4b42aee2ccf0011cc2386\""
+    },
+    {
+        "Key": "operations/equipment-maintenance-schedule.txt",
+        "Size": 634,
+        "ETag": "\"954cc20d772f64950c784a7885be6c0e\""
+    },
+    {
+        "Key": "operations/facilities-inspection-report.docx",
+        "Size": 36935,
+        "ETag": "\"45e44856d06cafe0a09b477c78c10c69\""
+    },
+    {
+        "Key": "operations/inventory-reconciliation-report.png",
+        "Size": 16488,
+        "ETag": "\"1759850f7f9f07d0ef811a1b65092b5c\""
+    },
+    {
+        "Key": "operations/inventory-status-report.txt",
+        "Size": 627,
+        "ETag": "\"6c2956ab934336a4843ecb5bcc708390\""
+    },
+    {
+        "Key": "operations/operations-kpi-review.png",
+        "Size": 16965,
+        "ETag": "\"422875ad81d1eeba02d85895c8bcb6ec\""
+    },
+    {
+        "Key": "operations/shipping-process-guide.txt",
+        "Size": 627,
+        "ETag": "\"fc4d772facdeca09e81386b437fb3989\""
+    },
+    {
+        "Key": "operations/standard-operating-procedure.png",
+        "Size": 16970,
+        "ETag": "\"d5070eee3b07512b28e58655b84338a3\""
+    },
+    {
+        "Key": "operations/supply-chain-summary.txt",
+        "Size": 626,
+        "ETag": "\"fb867d19a31dd5b8ec849d92a48cc9ed\""
+    },
+    {
+        "Key": "operations/vendor-contact-list.png",
+        "Size": 16614,
+        "ETag": "\"dd5c8c80124f5956394f286353a3975b\""
+    },
+    {
+        "Key": "operations/warehouse-procedure.xlsx",
+        "Size": 6127,
+        "ETag": "\"e8fdf320df963383ce8bfc514942e1c7\""
+    },
+    {
+        "Key": "sales/account-growth-analysis.txt",
+        "Size": 616,
+        "ETag": "\"c41dff7ef1523044b25d24b96d51e0b6\""
+    },
+    {
+        "Key": "sales/customer-presentation.docx",
+        "Size": 36926,
+        "ETag": "\"c3d577879af0149f791793c8da0b8881\""
+    },
+    {
+        "Key": "sales/lead-pipeline-report.xlsx",
+        "Size": 6122,
+        "ETag": "\"3a19a7fab88483be93438accd79c29bc\""
+    },
+    {
+        "Key": "sales/monthly-revenue-report.png",
+        "Size": 16481,
+        "ETag": "\"80f5909cb3b6396ac2061455c118c378\""
+    },
+    {
+        "Key": "sales/product-pricing-sheet.xlsx",
+        "Size": 6132,
+        "ETag": "\"af1d103258fef894a3f8427571c6fcba\""
+    },
+    {
+        "Key": "sales/q3-sales-performance.docx",
+        "Size": 36923,
+        "ETag": "\"722b1f7ace02221c1291888aa3fe4ffa\""
+    },
+    {
+        "Key": "sales/quarterly-forecast.xlsx",
+        "Size": 6122,
+        "ETag": "\"33d0c38aa0922ec4fc59fd11a03df33d\""
+    },
+    {
+        "Key": "sales/regional-sales-summary.png",
+        "Size": 16690,
+        "ETag": "\"7f881d25f82705372dd0bdfebc6f95a0\""
+    },
+    {
+        "Key": "sales/sales-enablement-guide.png",
+        "Size": 16481,
+        "ETag": "\"bf3ddd8d15965e34eb3be315b78f0ae2\""
+    },
+    {
+        "Key": "sales/sales-territory-plan.pdf",
+        "Size": 1814,
+        "ETag": "\"67e35f7809eb5defac26643f3554ddf9\""
+    }
+]

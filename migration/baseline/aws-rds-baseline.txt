@@ -1,0 +1,3 @@
+RDS baseline record count: 50
+RDS metadata SHA256: 50d26dd612aef9e56942f80e9901e07b1c237a7f1b4461a19ce7b1991400a919
+RDS metadata baseline valid: True

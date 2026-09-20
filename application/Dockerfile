@@ -6,7 +6,9 @@ COPY application/requirements.txt /app/application/requirements.txt
 
 RUN pip install --no-cache-dir -r /app/application/requirements.txt
 
-COPY application /app/application
+COPY application/ /app/application/
+COPY database/ /app/database/
+COPY sample-documents/manifest.json /app/sample-documents/manifest.json
 
 EXPOSE 5001
 

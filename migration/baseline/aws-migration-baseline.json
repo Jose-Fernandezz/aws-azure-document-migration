@@ -1,0 +1,14 @@
+{
+  "source_cloud": "AWS",
+  "database_service": "Amazon RDS for PostgreSQL",
+  "object_storage_service": "Amazon S3",
+  "expected_database_records": 50,
+  "expected_application_documents": 50,
+  "database_export": "migration/database/backups/aws-rds-data.sql",
+  "database_export_checksum": "migration/database/backups/aws-rds-data.sql.sha256",
+  "s3_inventory": "migration/storage/aws-s3-pre-migration-inventory.json",
+  "s3_inventory_checksum": "migration/storage/aws-s3-pre-migration-inventory.json.sha256",
+  "excluded_s3_prefixes": [
+    "migration-artifacts/"
+  ]
+}
