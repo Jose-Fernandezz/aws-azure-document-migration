@@ -347,7 +347,7 @@ def upload_document():
                     uploaded_at,
                     file_extension,
                     file_size,
-                    "local",
+                    Config.STORAGE_PROVIDER,
                     str(storage_location),
                     checksum,
                 ),

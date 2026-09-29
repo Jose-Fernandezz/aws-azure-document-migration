@@ -1,0 +1,40 @@
+flowchart TB
+
+    subgraph AWS["1. AWS Source Environment"]
+        direction LR
+        RDS["Amazon RDS PostgreSQL<br/>50 Metadata Records"]
+        S3["Amazon S3<br/>50 Business Documents"]
+        ECR["Amazon ECR<br/>Docker Image"]
+    end
+
+    subgraph MIG["2. Cross-Cloud Migration Process"]
+        direction LR
+        DBMIG["Database Migration<br/>Python + psycopg<br/>Validated CSV Export / Import"]
+        OBJMIG["Object Storage Migration<br/>AzCopy"]
+        APPMIG["Application Re-platforming<br/>Docker Image Deployment"]
+    end
+
+    subgraph AZURE["3. Azure Target Environment"]
+        direction LR
+        PG["Azure Database for PostgreSQL<br/>50 Metadata Records"]
+        BLOB["Azure Blob Storage<br/>50 Business Documents"]
+        ACA["Azure Container Apps<br/>Flask Application"]
+    end
+
+    VALIDATE["4. Migration Validation<br/><br/>Database Record Reconciliation<br/>Object Count Verification<br/>Metadata + Checksum Validation<br/>Application Health Testing"]
+
+    CUTOVER["5. Production Cutover<br/>Azure Target Becomes Active"]
+
+    RDS -->|"Metadata"| DBMIG
+    S3 -->|"Business Documents"| OBJMIG
+    ECR -->|"Application Image"| APPMIG
+
+    DBMIG -->|"Import"| PG
+    OBJMIG -->|"Copy"| BLOB
+    APPMIG -->|"Deploy"| ACA
+
+    PG --> VALIDATE
+    BLOB --> VALIDATE
+    ACA --> VALIDATE
+
+    VALIDATE -->|"PASS"| CUTOVER

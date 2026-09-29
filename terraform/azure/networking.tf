@@ -11,7 +11,6 @@ resource "azurerm_virtual_network" "migration" {
   }
 }
 
-
 resource "azurerm_subnet" "container_apps" {
   name                 = "snet-container-apps"
   resource_group_name  = azurerm_resource_group.migration.name
@@ -29,6 +28,10 @@ resource "azurerm_subnet" "container_apps" {
       ]
     }
   }
+
+  depends_on = [
+    azurerm_virtual_network.migration
+  ]
 }
 
 resource "azurerm_subnet" "postgresql" {
@@ -48,4 +51,8 @@ resource "azurerm_subnet" "postgresql" {
       ]
     }
   }
+
+  depends_on = [
+    azurerm_virtual_network.migration
+  ]
 }

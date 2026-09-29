@@ -1,24 +1,29 @@
-output "ecr_repository_url" {
-  description = "URL of the ECR repository used for the application image"
-  value       = aws_ecr_repository.app.repository_url
+output "container_registry_login_server" {
+  description = "Login server for the Azure Container Registry"
+  value       = azurerm_container_registry.migration.login_server
 }
 
-output "s3_bucket_name" {
-  description = "Name of the S3 bucket used to store application documents"
-  value       = aws_s3_bucket.documents.bucket
+output "postgresql_fqdn" {
+  description = "Fully qualified domain name of the Azure PostgreSQL server"
+  value       = azurerm_postgresql_flexible_server.migration.fqdn
 }
 
-output "rds_endpoint" {
-  description = "Endpoint of the PostgreSQL RDS instance"
-  value       = aws_db_instance.postgres.endpoint
+output "postgresql_database_name" {
+  description = "Name of the Azure PostgreSQL database"
+  value       = azurerm_postgresql_flexible_server_database.documents.name
 }
 
-output "ecs_cluster_name" {
-  description = "Name of the ECS cluster"
-  value       = aws_ecs_cluster.main.name
+output "storage_account_name" {
+  description = "Name of the Azure Storage Account"
+  value       = azurerm_storage_account.migration.name
 }
 
-output "ecs_service_name" {
-  description = "Name of the ECS service"
-  value       = aws_ecs_service.app.name
+output "storage_container_name" {
+  description = "Name of the Azure Blob Storage container"
+  value       = azurerm_storage_container.documents.name
+}
+
+output "container_app_fqdn" {
+  description = "Public FQDN of the Azure Container App"
+  value       = azurerm_container_app.migration.latest_revision_fqdn
 }

@@ -1,0 +1,17 @@
+
+
+Job c845da6e-3c51-ae4a-7903-219411c23d33 summary
+Number of File Transfers: 51
+Number of Folder Property Transfers: 0
+Number of Symlink Transfers: 0
+Total Number of Transfers: 51
+Number of File Transfers Completed: 51
+Number of Folder Transfers Completed: 0
+Number of File Transfers Failed: 0
+Number of Folder Transfers Failed: 0
+Number of File Transfers Skipped: 0
+Number of Folder Transfers Skipped: 0
+Total Number of Bytes Transferred: 658240
+Percent Complete (approx): 100.0
+Final Job Status: Completed
+

@@ -1,0 +1,66 @@
+flowchart TB
+
+    USER["User / Internet"]
+
+    subgraph AWS["AWS Source Environment — us-east-1"]
+        direction TB
+
+        subgraph SERVICES["AWS Supporting Services"]
+            direction LR
+            ECR["Amazon ECR<br/>Docker Image Registry"]
+            SECRETS["AWS Secrets Manager<br/>DATABASE_URL"]
+            IAM["AWS IAM<br/>Execution Role + Task Role"]
+        end
+
+        subgraph VPC["VPC — 10.0.0.0/16"]
+            direction TB
+
+            IGW["Internet Gateway<br/>VPC Internet Connectivity"]
+
+            subgraph PUBLIC["Public Subnet — 10.0.1.0/24"]
+                direction LR
+                ECSSG["ECS Security Group<br/>Inbound TCP 5001<br/>Outbound Allowed"]
+                ECS["Amazon ECS Fargate<br/>Flask Application<br/>Docker Container<br/>Public IP / ENI<br/>Port 5001"]
+            end
+
+            subgraph RDSGROUP["RDS DB Subnet Group"]
+                direction LR
+
+                subgraph PRIVATE1["Private Subnet — 10.0.10.0/24"]
+                    PRIMARY["Primary DB Subnet"]
+                end
+
+                subgraph PRIVATE2["Private Subnet — 10.0.20.0/24"]
+                    SECONDARY["Available for DB Subnet Group<br/>Second-AZ Coverage"]
+                end
+
+                RDSSG["RDS Security Group<br/>TCP 5432 from<br/>ECS SG only"]
+
+                RDS["Amazon RDS PostgreSQL<br/>Document Metadata<br/>Private / Single-AZ"]
+            end
+        end
+
+        subgraph DATAOBS["Storage & Observability"]
+            direction LR
+            S3["Amazon S3<br/>50 Business Documents<br/>Private + Encrypted"]
+            CW["Amazon CloudWatch<br/>Application Logs"]
+        end
+    end
+
+    USER -->|"HTTP :5001"| ECS
+
+    IGW -.->|"Provides Internet Connectivity"| ECS
+
+    ECR -->|"Container Image"| ECS
+    SECRETS -->|"Database Secret"| ECS
+    IAM -->|"Runtime Permissions"| ECS
+
+    ECSSG -.->|"Controls Inbound / Outbound Traffic"| ECS
+
+    ECS -->|"PostgreSQL :5432"| RDSSG
+    RDSSG -->|"Allows ECS SG Only"| RDS
+
+    PRIMARY --- RDS
+
+    ECS -->|"Upload / Download"| S3
+    ECS -->|"Application Logs"| CW

@@ -1,0 +1,42 @@
+flowchart TB
+
+    USER["User / Internet"]
+
+    subgraph AZURE["Azure Target Environment"]
+        direction TB
+
+        subgraph SUPPORT["Azure Supporting Services"]
+            direction LR
+            ACR["Azure Container Registry<br/>Application Docker Image"]
+            MI["System-Assigned<br/>Managed Identity"]
+            RBAC["Azure RBAC<br/>Storage Blob Data Contributor"]
+        end
+
+        subgraph APP["Azure Container Apps Environment"]
+            ACA["Azure Container App<br/>Flask Application<br/>Docker Container<br/>HTTPS Ingress"]
+        end
+
+        subgraph DATA["Azure Data Services"]
+            direction LR
+
+            PG["Azure Database for PostgreSQL<br/>Flexible Server<br/>50 Metadata Records<br/>Private Connectivity<br/>Public Access Disabled"]
+
+            subgraph STORAGE["Azure Storage Account"]
+                BLOB["Blob Storage<br/>documents Container<br/>50 Business Documents<br/>Private Storage"]
+            end
+        end
+    end
+
+    USER -->|"HTTPS"| ACA
+
+    ACR -->|"Deploys Container Image"| ACA
+
+    ACA -.->|"Uses System-Assigned Identity"| MI
+    MI -.->|"Assigned"| RBAC
+    RBAC -.->|"Authorizes Blob Access"| BLOB
+
+    ACA -->|"PostgreSQL :5432"| PG
+    ACA -->|"Upload / Download Documents"| BLOB
+
+    SUPPORT ~~~ APP
+    APP ~~~ DATA

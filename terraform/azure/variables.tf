@@ -1,7 +1,7 @@
 variable "location" {
   description = "Azure region used for the migration destination resources."
   type        = string
-  default     = "eastus"
+  default     = "centralus"
 }
 
 variable "resource_group_name" {

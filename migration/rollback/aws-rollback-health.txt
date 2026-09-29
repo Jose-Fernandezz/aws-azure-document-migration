@@ -1,0 +1,7 @@
+AWS Rollback Validation
+Timestamp: 2026-09-28T16:13:38Z
+ECS task: arn:aws:ecs:us-east-1:960154456453:task/aws-azure-document-migration-cluster/89ca820161cc4d7dae194f56aa7e5e0c
+ENI: eni-0b6273ff104ceb9ae
+Public IP: 3.237.103.82
+{"status":"ok","storage_provider":"S3StorageProvider"}
+
